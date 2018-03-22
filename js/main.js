@@ -67,7 +67,7 @@ window.addEventListener("load", async () => {
   };
 
   socket.onmessage = message => {
-    const data = JSON.parse(message);
+    const data = JSON.parse(message.data);
     if (data.type === "motor") {
       statusLabel.textContent = `status=${data.err} stat: ${data.stat}`;
     }
