@@ -17,6 +17,13 @@ window.addEventListener("load", async () => {
       command: "stop"
     }));
   };
+  const speak = message => {
+    socket.send(JSON.stringify({
+      type: "message",
+      message: message
+    }));
+  };
+
   const speedLabel = document.getElementById("speed");
   const statusLabel = document.getElementById("status");
   const textArea = document.getElementById("script-area");
@@ -33,6 +40,10 @@ window.addEventListener("load", async () => {
   };
   document.getElementById("stopFunc").onclick = e => {
     textArea.value += "stop();\n";
+    textArea.focus();
+  };
+  document.getElementById("speakFunc").onclick = e => {
+    textArea.value += "speak(\"\");\n";
     textArea.focus();
   };
 
