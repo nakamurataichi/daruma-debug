@@ -9,9 +9,9 @@ body {
 #right {
   width: 85%;
 }
-#speed {
-  font-size: 72px;
-  margin: 36px 36px 36px 36px;
+.label {
+  font-size: 36px;
+  margin: 18px 18px 18px 18px;
 }
 #script-area {
   width: 55%;
